@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavado de autos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'galeria.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+
+
+<body>
+
+    <section id="header">
+        <div class="Container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="Container">
+                    <a href="#" class="navbar-brand"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item ">
+                                <a href="{% url 'IND' %}" class="nav-link">Inicio</a>
+                            </li>
+
+
+
+                            <li class="nav-item ">
+                                <a href="{% url 'REGI' %}" class="nav-link">Registrarse</a>
+                            </li>
+
+                            
+                            <li class="nav-item ">
+                                {% if user.is_authenticated %}
+                                    <a href="{% url 'LOGOUT' %}"class="nav-link">Cerrar Sesion</a>
+                                {% else %}
+                                    <a href="{% url 'LOGI' %}" class="nav-link">Login</a>
+                                {% endif %}
+                            </li>
+
+                            <li class="nav-item ">
+                                <a href="{% url 'UBIC' %}" class="nav-link">Ubicación</a>
+                            </li>
+
+
+                            <li class="nav-item active">
+                                <a href="{% url 'GALE' %}" class="nav-link">Galeria</a>
+                            </li>
+
+
+
+                            <li class="nav-item ">
+                                <a href="{% url 'RESE' %}" class="nav-link">Reseñas</a>
+                            </li>
+
+
+
+                            <li class="nav-item ">
+                                <a href="{% url 'MISI' %}" class="nav-link">Nosotros</a>
+                            </li>
+
+
+                            
+                            <li class="nav-item ">
+                                <a href="{% url 'INSU' %}" class="nav-link">Insumos</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+            <div class="nav-item-welcome" style='color:white'>
+                {% if user.is_authenticated %}
+                <p>Bienvenido: {{user.first_name}} {{user.last_name}} - <b>{{user.username}}</b> </p>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="main">
+        <h1 class="h1-slider">Nuestras Instalaciones</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+
+                </div>
+                <!--Imagen de slider comienzo-->
+
+                <div class="slider">
+                    <div class="slides">
+                        <!--Radio button start-->
+                        <input type="radio" name=radio-btn id="radio1">
+                        <input type="radio" name=radio-btn id="radio2">
+                        <input type="radio" name=radio-btn id="radio3">
+                        <input type="radio" name=radio-btn id="radio4">
+                        <input type="radio" name=radio-btn id="radio5">
+                        <input type="radio" name=radio-btn id="radio6">
+                        <!--radio buttons end-->
+                        <!--Slider image start-->
+                        {% for item in imagenes1 %}
+                            {% if item.ident1 == 'slider1' %}
+                                <div class="slide first">
+                                    <img src="{{item.image1.url}}" alt="">
+                                </div>
+                            {% else %}
+                                <div class="slide">
+                                    <img src="{{item.image1.url}}" alt="">
+                                </div>
+                            {% endif %}
+
+                        {% endfor %}
+
+
+
+                        <!--<div class="slide first">
+                            <img src="{% static 'img/slider1.jpg' %}" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img src="{% static 'img/slider1.jpg' %}" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img src="{% static 'img/slider3.jpg' %}" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img src="{% static 'img/slider4.jpg' %}" alt="">
+                        </div>
+
+
+                        <div class="slide">
+                            <img src="{% static 'img/slider5.jpg' %}" alt="">
+                        </div>
+
+
+                        <div class="slide">
+                            <img src="{% static 'img/slider6.jpg' %}" alt="">
+                        </div>-->
+                        <!--Slider image end-->
+                        <!--Automatic navigation start-->
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                            <div class="auto-btn5"></div>
+                            <div class="auto-btn6"></div>
+                        </div>
+                        <!--Automatic navigation start-->
+                    </div>
+                    <!--Manual navigat6ion start-->
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                        <label for="radio5" class="manual-btn"></label>
+                        <label for="radio6" class="manual-btn"></label>
+
+                    </div>
+
+
+                    <!--Manual navigat6ion end-->
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="container-footer-all">
+
+            <div class="container-body">
+
+                <div class="columa1">
+                    <h1>Mas informacion de la compañia</h1>
+
+                    <p>Esta compañia familiar se dedica a la limpieza de autos, siempre dando el mejor servicio hacia sus clientes.</p>
+
+                </div>
+
+                <div class="columa2">
+
+                    <h1>Redes Sociales</h1>
+
+                    <div class="rowa">
+                        <img src="{% static 'img/facebook.png' %}">
+                        <label>Siguenos en Facebook</label>
+                    </div>
+
+                    <div class="rowa">
+                        <img src="{% static 'img/instagram.png' %}" >
+                        <label>Siguenos en Instagram</label>
+                    </div>
+                    <div class="rowa">
+                        <img src="{% static 'img/whatsapp.png' %}">
+                        <label>Contactanos en Whatsapp</label>
+                    </div>
+
+
+
+                </div>
+
+                <div class="columa3">
+
+                    <h1>Informacion Contactos</h1>
+
+                    <div class="rowa2">
+                        <img src="{% static 'img/house.png' %}">
+                        <label>Avenida Concha Y Toro, Av. San Carlos 1340, Puente Alto, Región Metropolitana</label>
+                    </div>
+
+                    <div class="rowa2">
+                        <img src="{% static 'img/smartphone.png' %}">
+                        <label>+569 55119044</label>
+                    </div>
+
+                    <div class="rowa2">
+                        <img src="{% static 'img/contact.png' %}">
+                        <label>LDA.DonMiguel@gmail.com</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-footer">
+            <div class="footer">
+                <div class="copyright">
+                    © 2020 Todos los Derechos Reservados | <a href="">Lavados de autos Don Miguel</a>
+                </div>
+
+                <div class="information">
+                    <a href="">Informacion Compañia</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y Condiciones</a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>

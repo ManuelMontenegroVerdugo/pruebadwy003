@@ -1,0 +1,305 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+#header{
+    background-color: transparent;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba(20, 17, 17, 0.89);
+}
+
+
+.navbar{
+    float:right;
+    padding-left: 10px 0;
+
+}
+
+.navbar-brand{
+    
+    font-weight: 600;
+    font-size: 1.5em;
+    
+}
+
+
+.navbar-dark .navbar-brand{
+    color: #dcdde1;
+}
+
+.nav-item{
+    top: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-item .nav-link:hover{
+    border-radius: 6px;
+    margin-right: auto;
+    background:#dcdde1;
+    color: #262626;
+}
+
+
+
+
+
+
+
+
+h1{
+	font-size: 40px;
+	color:gray;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+
+.label{
+	font-size: 19px;
+	margin-top: 20px;
+	font-weight: normal;
+}
+
+.form-control{
+	background-color: rgba(225,255,255,0.2);
+	border: 0px;
+	border-radius: 0px;
+	border-bottom: 2px solid white;
+	font-size: 21px;
+	color:white;
+	margin-top: 20px;
+}
+
+small{
+	font-size: 18px;
+	color: gray;
+}
+
+option{
+	color: #666;
+}
+
+/* BOTON DE REGISTRO */
+.btn-enviar{
+    color: #262626;
+    position: absolute;
+    top:90%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background: none;
+    color: #ccc;
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+}
+
+
+
+.btn:focus{
+    outline: none;
+}
+
+.btn:before{
+    content: '';
+    display: block;
+    position:absolute;
+    background: rgba(247, 241, 241, 0.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+
+.btn:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(63, 223, 223, 0.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top:0;
+    opacity: 0;
+    filter:blur(30px);
+    transform: translate(-100px) scaleX(-15deg);
+}
+
+.btn:hover{
+    background: white;
+    cursor: pointer;
+}
+
+
+.btn:hover:before{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6s;
+    transition: .7s;
+}
+
+/* BOTON DE REGISTRO  FIN */
+
+
+
+
+
+
+/* BOTON DE LIMPIAR INICIO */
+
+.btn-listar{
+    color: #262626;
+    position: absolute;
+    top:90%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    background: none;
+    color: #ccc;
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.btn:before{
+    content: '';
+    display: block;
+    position:absolute;
+    background: rgba(247, 241, 241, 0.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+
+.btn:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(63, 223, 223, 0.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top:0;
+    opacity: 0;
+    filter:blur(30px);
+    transform: translate(-100px) scaleX(-15deg);
+}
+
+.btn:hover{
+    background: white;
+    cursor: pointer;
+}
+
+
+.btn:hover:before{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6s;
+    transition: .7s;
+}
+
+/* BOTON DE LIMPIAR INICIO FIN */
+
+
+
+
+.col-md-6{
+	background: rgba(0, 0, 0, 0.4);
+    height: 850px;
+    
+	box-shadow: -1px 1px 60px 10px black inset;
+}
+
+
+
+.row{
+    height: 800px;
+}
+
+
+
+
+
+.form_link{
+    color: #262626;
+    position: absolute;
+    top:80%;
+    right: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main{
+    position:relative;
+    background:url("../img/fondo1.jpeg");
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding:220px 0 200px ;
+    
+}
+
+
+.main h2{
+    margin:0;
+    padding:0;
+    font-size: 2.6em;
+    color: #dcdde1;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main p{
+    margin-top: 1em;
+    padding: 0;
+    font-size: 1em;
+    color: #dcdde1;
+}
+
+.main .btn{
+    background: #718093;
+    color:#fff;
+    border-radius: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media(max-width:768px){
+    .main{
+        padding:200px 0;        
+    }
+
+    .main h2{
+        font-size: 2em;
+    }
+}

@@ -1,0 +1,365 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+#header{
+    background-color: transparent;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba(20, 17, 17, 0.89);
+}
+
+
+.navbar{
+    float:right;
+    padding-left: 10px 0;
+
+}
+
+.navbar-brand{
+    
+    font-weight: 600;
+    font-size: 1.5em;
+    
+}
+
+
+.navbar-dark .navbar-brand{
+    color: #262626;
+}
+
+.nav-item{
+    top: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-item .nav-link:hover{
+    border-radius: 6px;
+    margin-right: auto;
+    background:#dcdde1;
+    color: #262626;
+}
+
+
+
+
+/*contacto*/
+
+.contact-in
+{
+	width: 60%;
+	height: 70%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.473);
+	box-shadow:-1px 1px 60px 19px;
+}
+
+.contact-map
+{
+	width: 30%;
+	height: auto;
+	flex: 40%;
+}
+.contact-map iframe
+{
+	width: 100%;
+	height: 100%;
+}
+.contact-form
+{
+	width: 50%;
+	height: auto;
+	flex: 50%;
+	padding: 30px;
+	text-align: center;
+}
+.contact-form h1
+{
+	color: rgb(252, 246, 246);
+	margin-bottom: 10px;
+}
+
+.contact-form-txt
+{
+	width: 100%;
+	height: 40px;
+	color: rgb(0, 0, 0);
+	border: 1px solid #bcbcbc;
+	border-radius: 50px;
+	outline: none;
+	margin-bottom: 20px;
+	padding: 15px;
+}
+.contact-form-txt::placeholder
+{
+	color: #aaa;
+}
+.contact-form-textarea
+{
+	width: 100%;
+	height: 130px;
+	color: #000;
+	border: 1px solid #bcbcbc;
+	border-radius: 10px;
+	outline: none;
+	margin-bottom: 20px;
+	padding: 15px;
+	font-family: 'Poppins', sans-serif;
+}
+.contact-form-textarea::placeholder
+{
+	color: #aaa;
+}
+
+.contact-form-btn
+{
+	width: 100%;
+	border:none;
+	outline: none;
+	border-radius: 50px;
+	background: #ffffff;
+	color: rgb(0, 0, 0);
+	text-transform: uppercase;
+	padding: 10px 0;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+
+
+.main{
+    position:relative;
+    background:url("../img/fondo1.jpeg");
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding:220px 0 200px ;
+    
+}
+
+
+.main h2{
+    margin:0;
+    padding:0;
+    font-size: 2.6em;
+    color: #dcdde1;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main p{
+    margin-top: 1em;
+    padding: 0;
+    font-size: 1em;
+    color: #dcdde1;
+}
+
+.main .btn{
+    background: #718093;
+    color:#fff;
+    border-radius: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+@media screen and (min-width:480px) and (max-width:780px) {
+    .main{
+        padding:200px 0;        
+    }
+
+    .main h2{
+        font-size: 2em;
+    }
+
+    .contact-in
+    {
+        width: 160%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.473);
+        box-shadow:-1px 1px 60px 19px;
+    }
+
+    .contact-map
+    {
+        width: 30%;
+        height: auto;
+        flex: 40%;
+    }
+    .contact-map iframe
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .contact-form
+    {
+        width: 50%;
+        height: auto;
+        flex: 50%;
+        padding: 30px;
+        text-align: center;
+    }
+    .contact-form h1
+    {
+        color: rgb(252, 246, 246);
+        margin-bottom: 10px;
+    }
+
+    .contact-form-txt
+    {
+        width: 100%;
+        height: 40px;
+        color: rgb(0, 0, 0);
+        border: 1px solid #bcbcbc;
+        border-radius: 50px;
+        outline: none;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+    .contact-form-txt::placeholder
+    {
+        color: #aaa;
+    }
+    .contact-form-textarea
+    {
+        width: 100%;
+        height: 130px;
+        color: #000;
+        border: 1px solid #bcbcbc;
+        border-radius: 10px;
+        outline: none;
+        margin-bottom: 20px;
+        padding: 15px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .contact-form-textarea::placeholder
+    {
+        color: #aaa;
+    }
+
+    .contact-form-btn
+    {
+        width: 100%;
+        border:none;
+        outline: none;
+        border-radius: 50px;
+        background: #ffffff;
+        color: rgb(0, 0, 0);
+        text-transform: uppercase;
+        padding: 10px 0;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+}
+
+
+
+@media screen and (max-width:480px) {
+    .main{
+        padding:200px 0;        
+    }
+
+    .main h2{
+        font-size: 2em;
+    }
+
+    .contact-in
+    {
+        width: auto;
+        height: auto;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.473);
+        box-shadow:-1px 1px 60px 19px;
+    }
+
+    .contact-map
+    {
+        width: auto;
+        height: auto;
+        flex: 40%;
+    }
+    .contact-map iframe
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .contact-form
+    {
+        width: 50%;
+        height: auto;
+        flex: 50%;
+        padding: 30px;
+        text-align: center;
+    }
+    .contact-form h1
+    {
+        color: rgb(252, 246, 246);
+        margin-bottom: 10px;
+    }
+
+    .contact-form-txt
+    {
+        width: auto;
+        height: auto;
+        color: rgb(0, 0, 0);
+        border: 1px solid #bcbcbc;
+        border-radius: 50px;
+        outline: none;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+    .contact-form-txt::placeholder
+    {
+        color: #aaa;
+    }
+    .contact-form-textarea
+    {
+        width: auto;
+        height: 130px;
+        color: #000;
+        border: 1px solid #bcbcbc;
+        border-radius: 10px;
+        outline: none;
+        margin-bottom: 20px;
+        padding: 15px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .contact-form-textarea::placeholder
+    {
+        color: #aaa;
+    }
+
+    .contact-form-btn
+    {
+        width: 100%;
+        border:none;
+        outline: none;
+        border-radius: 50px;
+        background: #ffffff;
+        color: rgb(0, 0, 0);
+        text-transform: uppercase;
+        padding: 10px 0;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+}
